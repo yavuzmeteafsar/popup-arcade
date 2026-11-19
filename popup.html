@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Popup Arcade</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main id="menu" class="view">
+    <header class="hero">
+      <div id="deco-left" class="deco deco-left" aria-hidden="true"></div>
+      <h1 id="brand" class="brand"></h1>
+      <div id="deco-right" class="deco deco-right" aria-hidden="true"></div>
+    </header>
+    <p class="subtitle">Select a game</p>
+    <div id="game-list" class="game-list"></div>
+  </main>
+
+  <main id="game-view" class="view" hidden>
+    <header class="bar">
+      <button id="back" class="pixel-button back" type="button">← Menu</button>
+      <span id="game-title" class="title"></span>
+      <div class="scores">
+        <span class="label">Score</span><span id="score" class="value">0</span>
+        <span class="label">Best</span><span id="high" class="value">—</span>
+      </div>
+    </header>
+    <canvas id="canvas" tabindex="0"></canvas>
+    <footer id="controls" class="controls"></footer>
+  </main>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
