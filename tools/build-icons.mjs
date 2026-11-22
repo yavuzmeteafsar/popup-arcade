@@ -68,20 +68,21 @@ const ICON_ART = {
   16: { grid: ICONS.joystick, scale: 1 },
   32: { grid: ICONS.joystick, scale: 2 },
   48: { grid: ICONS.joystick, scale: 3 },
-  128: { grid: ICONS.cabinet, scale: 4 },
+  128: { grid: ICONS.cabinet, scale: 3, pad: 16 },
 };
 
 function icon(size) {
   const img = canvas(size, size);
-  const r = size * 0.22;
-  for (let y = 0; y < size; y++) {
-    for (let x = 0; x < size; x++) {
-      const cx = Math.min(Math.max(x + 0.5, r), size - r);
-      const cy = Math.min(Math.max(y + 0.5, r), size - r);
+  const { grid, scale, pad = 0 } = ICON_ART[size];
+  const inner = size - pad * 2;
+  const r = inner * 0.22;
+  for (let y = pad; y < size - pad; y++) {
+    for (let x = pad; x < size - pad; x++) {
+      const cx = Math.min(Math.max(x + 0.5, pad + r), size - pad - r);
+      const cy = Math.min(Math.max(y + 0.5, pad + r), size - pad - r);
       if (Math.hypot(x + 0.5 - cx, y + 0.5 - cy) <= r) img.set(x, y, BLACK);
     }
   }
-  const { grid, scale } = ICON_ART[size];
   const ox = Math.floor((size - grid[0].length * scale) / 2);
   const oy = Math.floor((size - grid.length * scale) / 2);
   paintGrid(img, grid, ox, oy, scale, WHITE);

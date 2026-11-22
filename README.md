@@ -53,7 +53,7 @@ Pingpix, Snake and Highway.
 
 - Black and white pixel-art style, in light and dark mode
 - High scores saved locally with `chrome.storage.local`, nothing leaves your browser
-- Only the `storage` permission, no network access, no tracking
+- Only the `storage` permission, no network access, no tracking ([privacy policy](PRIVACY.md))
 - Works offline
 - Respects reduced-motion settings
 
