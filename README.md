@@ -17,6 +17,10 @@
 </p>
 
 <p align="center">
+  <a href="https://chromewebstore.google.com/detail/eoaibbkajcpedainbccbnfngjofhlapk"><img alt="Available in the Chrome Web Store" src="https://img.shields.io/badge/Chrome_Web_Store-Install-111111?logo=googlechrome&logoColor=white&style=for-the-badge"></a>
+</p>
+
+<p align="center">
   <img src="docs/screenshots/menu-light.png" alt="Popup Arcade menu in light mode" width="49%">
   <img src="docs/screenshots/menu-dark.png" alt="Popup Arcade menu in dark mode" width="49%">
 </p>
@@ -58,6 +62,9 @@ Pingpix, Snake and Highway.
 - Respects reduced-motion settings
 
 ## Install
+
+### Chrome Web Store
+Install Popup Arcade from the [Chrome Web Store](https://chromewebstore.google.com/detail/eoaibbkajcpedainbccbnfngjofhlapk), then pin it from the extensions menu and click the joystick icon.
 
 ### From source
 1. Download or clone this repository
